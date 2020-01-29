@@ -22,15 +22,12 @@ public class MetricConversion {
         convertGtoL = conversionGallon(userEntry);
         convertItoC = conversionInches(userEntry);
         gallonsNum1.setGallons(userEntry);
-        litersNum1.setLiters(userEntry);
+        litersNum1.setLiters(convertGtoL);
         inchesNum1.setInches(userEntry);
-        centimetersNum1.setCentimeters(userEntry);
+        centimetersNum1.setCentimeters(convertItoC);
 
-
-        System.out.println(convertGtoL);
-        System.out.println(convertItoC);
-        System.out.println(litersNum1.getLiters() + " is the entry in liters.");
-        System.out.println(centimetersNum1.getCentimeters() + " is the entry in centimeters.");
+        System.out.println(gallonsNum1.getGallons() + " gallons is " + litersNum1.getLiters() + " liters.");
+        System.out.println(inchesNum1.getInches() + " inches is " + centimetersNum1.getCentimeters() + " centimeters.");
 
     }
 
