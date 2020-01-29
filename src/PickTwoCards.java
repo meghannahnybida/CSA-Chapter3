@@ -5,7 +5,10 @@ public class PickTwoCards {
     public static void main(String[] args) {
 
         final int CARDS_IN_SUIT = 13;
-        char[] suits = {'H', 'D', 'S', 'C'};
+        Random rd = new Random();
+        char[] suits = {'S', 'D', 'C', 'H'};
+        int randS = rd.nextInt(suits.length);
+        int randD = rd.nextInt(suits.length);
         int myValue;
         int yourValue;
         Cards myCard = new Cards();
@@ -15,9 +18,9 @@ public class PickTwoCards {
         yourValue = ((int) (Math.random() * 100) % CARDS_IN_SUIT + 1);
 
         myCard.setValue(myValue);
-        myCard.setSuit('S');
+        myCard.setSuit(suits[randS]);
         yourCard.setValue(yourValue);
-        yourCard.setSuit('H');
+        yourCard.setSuit(suits[randD]);
 
         System.out.println("My card is the " + myCard.getValue() + " of " + myCard.getSuit());
         System.out.println("Your card is the " +yourCard.getValue() + " of " + yourCard.getSuit());
