@@ -1,16 +1,18 @@
 import java.util.Random;
 
 public class PickTwoCards {
+    //Author: Meghan Nahnybida
+    //Date: 1/23/2020
 
     public static void main(String[] args) {
 
         final int CARDS_IN_SUIT = 13;
-        Random rd = new Random();
         char[] suits = {'S', 'D', 'C', 'H'};
-        int randS = rd.nextInt(suits.length);
-        int randD = rd.nextInt(suits.length);
+        int rand1 = ((int) (Math.random() * suits.length));
+        int rand2 = ((int) (Math.random() * suits.length));
         int myValue;
         int yourValue;
+
         Cards myCard = new Cards();
         Cards yourCard = new Cards();
 
@@ -18,11 +20,12 @@ public class PickTwoCards {
         yourValue = ((int) (Math.random() * 100) % CARDS_IN_SUIT + 1);
 
         myCard.setValue(myValue);
-        myCard.setSuit(suits[randS]);
         yourCard.setValue(yourValue);
-        yourCard.setSuit(suits[randD]);
+        myCard.setSuit(suits[rand1]);
+        yourCard.setSuit(suits[rand2]);
 
         System.out.println("My card is the " + myCard.getValue() + " of " + myCard.getSuit());
-        System.out.println("Your card is the " +yourCard.getValue() + " of " + yourCard.getSuit());
+        System.out.println("Your card is the " + yourCard.getValue() + " of " + yourCard.getSuit());
     }
+
 }

@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class MetricConversion {
+    //Author: Meghan Nahnybida
+    //Date: 1/23/2020
 
     public static void main(String [] args)
     {
